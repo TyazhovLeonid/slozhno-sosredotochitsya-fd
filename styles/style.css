@@ -2,4 +2,194 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background: center / cover var(--bg-image, url('../images/cover-image-dark.png'));
+  background-attachment: fixed;
+  background-color: var(--bg-color, #000028);
+  font-family: var(--main-font, sans-serif);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  block-size: max(100vh, 668px);
+  padding: 10px;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  block-size: 25px;
+  inline-size: 25px;
+  border-left: solid 1px var(--accent-color, #FF0070);
+  border-bottom: solid 1px var(--accent-color, #FF0070);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  block-size: 25px;
+  inline-size: 25px;
+  border-top: solid 1px var(--accent-color, #FF0070);
+  border-right: solid 1px var(--accent-color, #FF0070);
+}
+
+.decoration-text {
+  color: var(--accent-color, #FF0070);
+  font-size: 18px;
+  line-height: 25px;
+  position: relative;
+  align-self: end;
+  padding-inline-end: 29px;
+}
+
+.decoration-text::after {
+  content: '';
+  position: absolute;
+  align-self: center;
+  left: calc(3ch + 10px);
+  border-radius: 50%;
+  background-color: var(--accent-color, #FF0070);
+  block-size: 9px;
+  inline-size: 9px;
+  box-shadow: 0 0 4px 2px var(--accent-color, #FF0070);
+}
+
+.header__theme-menu {
+  align-self: end;
+  margin-block: 39px 65px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.header__theme-menu-item {
+  color: var(--accent-color,#FF0070);
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color,#FF0070);
+  text-transform: lowercase;
+  padding: 1.5px 13px;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.header__theme-menu-button_active {
+  border: solid 1px var(--accent-color,#FF0070);
+}
+
+.title {
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--title-color, #DB00FF);
+  text-shadow: 4px 4px var(--accent-color, #FF0070);
+}
+
+.title-decor {
+  background-color: var(--accent-color, #FF0070);
+  color: var(--text-contrast-color, #000028);
+  font-weight: bold;
+  line-height: 23.4px;
+  font-size: 18px;
+}
+
+.subtitle-decor {
+  background-color: var(--accent-color, #FF0070);
+  color: var(--text-contrast-color, #000028);
+  font-weight: normal;
+  line-height: 23.4px;
+  font-size: 18px;
+}
+
+header .title-decor {
+  margin-block: 55px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-inline: 10px;
+  margin-block: 40px;
+}
+
+.content__section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content__section-title {
+  color: var(--accent-color, #FF0070);
+  font-weight: bold;
+  line-height: 23.4px;
+  font-size: 18px;
+}
+
+.content__section__cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+
+.content__section__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content__section-text {
+  color: var(--text-color, #F1B2CE);
+  font-weight: normal;
+  line-height: 23.4px;
+  font-size: 18px;
+}
+
+.content__section-text a {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--accent-color, #FF0070);
+}
+
+.content__section-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content__section-gallery li {
+  height: fit-content;
+}
+.content__section-gallery-image {
+  width: 100%;
+  display: block;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  block-size: max(100vh, 668px);
+  
+  position: relative;
+}
+
+footer .title {
+  margin-inline: auto;
+  text-shadow: 2px 2px var(--accent-color, #FF0070);
 }
