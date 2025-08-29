@@ -4,9 +4,11 @@
 */
 :root {
   --bg-image: url('../images/cover-image.png');
+  --display-element: block;
   --bg-color: #000028;
   --text-contrast-color: #000028;
   --accent-color: #FF0070;
+  --accent-bg-color: #FF0070;
   --text-color: #F1B2CE;
   --title-color: #DB00FF;
   --main-font: 'IBM Plex mono';
