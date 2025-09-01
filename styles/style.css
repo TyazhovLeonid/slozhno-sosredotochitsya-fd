@@ -276,7 +276,6 @@ footer .title {
   }
   .content__section-gallery {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     grid-auto-flow: dense;
     gap: 20px;
     margin-block-start: 10px;
