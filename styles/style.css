@@ -189,7 +189,7 @@ header .title-decor {
   outline: none;
 }
 .content__section-text a:focus-visible {
-  outline: 1px solid var(--accent-color, #ff0070);
+  outline: 1px solid var(--text-color, #f1b2ce);
 }
 
 .content__section__unique-card {
@@ -265,11 +265,13 @@ footer .title {
   }
   .content__section:nth-child(odd) {
     grid-template-columns: minmax(min-content, max-content) 2fr;
+    align-items: start;
   }
 
   .content__section:nth-child(odd) .content__section__cards-list {
     grid-column: 2;
   }
+
   .content__section-title {
     justify-self: flex-start;
     max-inline-size: 236px;
