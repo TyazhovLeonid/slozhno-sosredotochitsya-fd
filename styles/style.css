@@ -192,7 +192,7 @@ header .title-decor {
   outline: 1px solid var(--accent-color, #ff0070);
 }
 
-.content__section__two-level-card {
+.content__section__unique-card {
   display: flex;
   flex-direction: column;
   gap: 20px;
